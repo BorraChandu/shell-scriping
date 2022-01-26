@@ -12,3 +12,6 @@ echo No Of Users = $NO_OF_USERS
 # date with command substitution
 DATE=$(date +%F)
 echo welcome, today date is $DATE
+
+echo COURSE NAME = ${COURSE_NAME}
+
