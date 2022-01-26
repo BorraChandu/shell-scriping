@@ -31,7 +31,7 @@ echo -e Hello World,/n/tWelcome
 
 # colors enabled will take these colors to nest lines, Hence we need to disabel color printing . \e[0m , 0 will reset the color
 
-echo -e "\e[31mMESSAGE IN RED"
-echo -e "\e[33mMESSAGE IN YELLOW"
+echo -e "\e[31mMESSAGE IN RED\e[0m"
+echo -e "\e[33mMESSAGE IN YELLOW\e[0m"
 
 echo hello world in plain color
