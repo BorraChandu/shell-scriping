@@ -12,11 +12,11 @@
 echo welcome hello world
 
 ## syntaxes for color or new lines : echo  -e "MESSAGE/n/t/e"
-echo -e option do need message to be quoted (enter single or double quotes) | (without quotes also work but more syntaxing)
+# echo -e option do need message to be quoted (enter single or double quotes) | (without quotes also work but more syntaxing)
 
 # Print Multiple Lines (/n), Some tab space (/t)
 
-echo Hello World,/n/tWelcome
+echo -e Hello World,/n/tWelcome
 
 # Enable Colors (/e)
 
