@@ -2,6 +2,8 @@
 
 A=10
 echo A = $A
+DATE="2022-01-27"
+echo welcome, today date is $DATE
 
 ## Command subs
 NO_OF_USERS=$(who |wc -l)
