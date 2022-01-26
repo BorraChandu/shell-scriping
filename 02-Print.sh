@@ -29,5 +29,9 @@ echo -e Hello World,/n/tWelcome
 # MAGENTA   35
 # CYAN      36
 
+# colors enabled will take these colors to nest lines, Hence we need to disabel color printing . \e[0m , 0 will reset the color
+
 echo -e "\e[31mMESSAGE IN RED"
 echo -e "\e[33mMESSAGE IN YELLOW"
+
+echo hello world in plain color
