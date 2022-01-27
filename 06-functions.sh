@@ -6,6 +6,7 @@ sample() {
   echo value of a = ${a}
   b=200
   echo first argument in function = $1
+  local c=0 # scope of this variable is inside function
 }
 
 ## main program
