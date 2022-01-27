@@ -5,6 +5,7 @@ sample() {
   echo hello i am a sample function
   echo value of a = ${a}
   b=200
+  echo first argument in function = $1
 }
 
 ## main program
