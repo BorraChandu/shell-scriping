@@ -1,8 +1,8 @@
 #!/bin/bash
 
 source common.sh
-PRINT "Installing Nginx"
 
+PRINT "Installing Nginx"
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
