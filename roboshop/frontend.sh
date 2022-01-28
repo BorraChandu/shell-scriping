@@ -3,24 +3,24 @@
 source common.sh
 
 PRINT "Installing Nginx\t"
-yum install nginx -y &>>$LOG
+yum install nginx -y
 STAT_CHECK $?
 
 PRINT "Download Frontend\t"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 STAT_CHECK $?
 
 
 PRINT "Remove Old HtDocs\t"
-cd /usr/share/nginx/html &>>$LOG && rm -rf * &>>$LOG
+cd /usr/share/nginx/html &>>$LOG && rm -rf *
 STAT_CHECK $?
 
 PRINT "Extract Frontend Archive"
-unzip /tmp/frontend.zip &>>$LOG && mv frontend-main/* . &>>$LOG && mv static/* . &>>$LOG  && rm -rf frontend-master static &>>$LOG
+unzip /tmp/frontend.zip  && mv frontend-main/* .  && mv static/* .   && rm -rf frontend-master static
 STAT_CHECK $?
 
 PRINT "Copy RoboShop Config\t"
-mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
 STAT_CHECK $?
 
 PRINT "Update RoboShop Config\t"
@@ -28,9 +28,9 @@ sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' -e '/user/ s/lo
 STAT_CHECK $?
 
 PRINT "Enabling Nginx\t\t"
-systemctl enable nginx  &>>$LOG
+systemctl enable nginx
 STAT_CHECK $?
 
 PRINT "Starting Nginx\t\t"
-systemctl restart nginx  &>>$LOG
+systemctl restart nginx
 STAT_CHECK $?
