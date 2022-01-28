@@ -1,18 +1,20 @@
 #!/usr/bin/bash
 
-## decleare a function
+## Declare a function
+
 sample() {
-  echo hello i am a sample function
-  echo value of a = ${a}
+  echo Hello , I am a Sample function
+  echo Value of a = ${a}
   b=200
-  echo first argument in function = $1
-  local c=0 # scope of this variable is inside function
+  echo First Argument in Function = $1
+  local c=10 # scope of this variable is inside function
 }
 
-## main program
+## Main Program
 
-#call the function
+## Call the function
 a=100
-sample = ABC
-echo value of b=${b}
-echo first argument in main program = $1
+sample ABC
+echo Value of b = ${b}
+echo First Argument in Main Program = $1
+

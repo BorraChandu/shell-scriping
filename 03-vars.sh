@@ -1,17 +1,16 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
 
 A=10
 echo A = $A
-DATE="2022-01-27"
-echo welcome, today date is $DATE
+DATE="2021-07-14"
+echo Welcome, Today date is $DATE
 
-## Command subs
+## Command Subs
 NO_OF_USERS=$(who |wc -l)
-echo No Of Users = $NO_OF_USERS
+echo Number of Users = $NO_OF_USERS
 
-# date with command substitution
+## Date with command substitution
 DATE=$(date +%F)
-echo welcome, today date is $DATE
+echo Welcome, Today date is $DATE
 
 echo COURSE NAME = ${COURSE_NAME}
-
